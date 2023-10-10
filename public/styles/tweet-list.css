@@ -8,14 +8,48 @@ article:hover {
   box-shadow: 6px 6px 0px 0px rgba(84, 81, 73, .4)
 }
 
+article img {
+  transform: scale(0.8);
+}
+
 article>header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4%;
+}
+
+article>header>div {
+  display: flex;
+  align-items: center;
+  column-gap: 5%
 }
 
 article>footer {
   display: flex;
   justify-content: space-between;
+  padding: 0 1.5%;
+}
+
+article>footer>p {
+  font-size: 70%;
+  font-weight: 700;
+}
+
+article>footer>div {
+  display: flex;
+  /* column-gap: 1%; */
+}
+
+article>footer>div>i {
+  transform: scale(0.6);
+  color: #4056a1;
+  transition: linear 30ms;
+  cursor: pointer;
+}
+
+article>footer>div>i:hover {
+  color: #cc9a3e;
 }
 
 article>hr {
