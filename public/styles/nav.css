@@ -8,6 +8,7 @@ nav {
   justify-content: space-between;
   align-items: flex-end;
   position: sticky;
+  top: -37px;
 }
 
 .title {
