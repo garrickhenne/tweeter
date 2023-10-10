@@ -7,7 +7,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  position: fixed;
+  position: sticky;
 }
 
 .title {

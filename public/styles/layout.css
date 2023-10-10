@@ -27,3 +27,11 @@ body {
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+main {
+  /* padding: 0 10% 0 10%; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: inherit;
+  margin: 0 5%;
+}
