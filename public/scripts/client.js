@@ -35,6 +35,16 @@ const createTweetElement = (tweet) => {
 
 const renderTweets = (tweets) => {
   $('main').append(tweets.map(createTweetElement));
+  $('main form').on('submit', function(e) {
+    e.preventDefault();
+    const $tweetText = $(this).find('#tweet-text');
+    console.log('posting tweet:', $tweetText.serialize());
+    $.ajax({
+      type: 'POST',
+      url: '/tweets',
+      data: $tweetText.serialize()
+    });
+  });
 };
 
 const data = [
