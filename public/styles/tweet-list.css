@@ -1,0 +1,27 @@
+article {
+  border: 4px solid #545149;
+  padding: 2%;
+  margin: 3% 0;
+}
+
+article:hover {
+  box-shadow: 6px 6px 0px 0px rgba(84, 81, 73, .4)
+}
+
+article>header {
+  display: flex;
+  justify-content: space-between;
+}
+
+article>footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+article>hr {
+  border-top: 4px solid #545149;
+}
+
+header>p>strong {
+  color: rgba(84, 81, 73, .4);
+}

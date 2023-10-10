@@ -27,3 +27,7 @@ label {
   justify-content: space-between;
   font-family: 'Bungee', sans-serif;
 }
+
+.new-tweet {
+  margin: 40px 0;
+}
