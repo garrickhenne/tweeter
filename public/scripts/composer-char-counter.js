@@ -1,5 +1,6 @@
-$(document).ready(() => {
-  $('#tweet-text').on('input', function(e) {
+/* eslint-disable no-undef */
+$(document).on('ready', () => {
+  $('#tweet-text').on('input', function() {
     const defaultColor = '#545149';
     const exceededCharsColor = '#DD4C31';
 
