@@ -1,6 +1,5 @@
-header {
+header#profile-header {
   width: 100%;
-  /* 120 is the height of the nav bar element. */
   height: 400px;
   display: flex;
   justify-content: end;
