@@ -1,0 +1,11 @@
+header {
+  width: 100%;
+  /* 120 is the height of the nav bar element. */
+  height: calc(400px + 120px);
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  flex-direction: column;
+  background-color: #cc9a3e;
+  background-image: url('../images/cartographer.png');
+}
