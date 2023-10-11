@@ -4,6 +4,11 @@ button {
   border: none;
 }
 
+button:disabled,
+button[disabled]{
+  filter: grayscale(1);
+}
+
 label {
   font-family: 'Source Sans 3', sans-serif;
 }
