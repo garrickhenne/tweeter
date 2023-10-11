@@ -53,7 +53,10 @@ const clearTextArea = ($textArea) => $textArea.val('');
 const initTweetPostHandler = () => {
   $('main form').on('submit', function(e) {
     e.preventDefault();
-    const $tweetText = $(this).find('#tweet-text');
+    // Clone tweet-text element so UI is not effected when escaped value is set.
+    const $tweetText = $(this).find('#tweet-text').clone();
+    const $escapedInput = $('<div>').text($tweetText.val());
+    $tweetText.val($escapedInput.html());
     if ($tweetText.val() === '' || $tweetText.val().length > 140) {
       alert('Please enter valid data.');
       return;
@@ -65,7 +68,8 @@ const initTweetPostHandler = () => {
       data: $tweetText.serialize(),
       success: function() {
         loadTweets(renderCreatedTweet);
-        clearTextArea($tweetText);
+        // Pass original element rather than clone to actually clear UI.
+        clearTextArea($('#tweet-text'));
       }
     });
   });
