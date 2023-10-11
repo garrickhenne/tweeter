@@ -113,8 +113,23 @@ const initNewTweetHeaderHandlers = function() {
   };
 
   const initToggle = function($element) {
+    let isToggled = true;
     $element.on('click', function() {
-      $('.new-tweet').toggle('slow');
+      const $newTweetElement = $('.new-tweet');
+      if (isToggled) {
+        $newTweetElement.hide('slow');
+      } else {
+        $newTweetElement.show('fast', function() {
+          // Scroll to top instead of beginning of table since there are some issues with sticky header.
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+
+          // Set focus 'asynchronously'.
+          setTimeout(() => {
+            this.querySelector('textarea').focus();
+          }, 1000);
+        });
+      }
+      isToggled = !isToggled;
     });
   };
 
