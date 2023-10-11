@@ -48,16 +48,17 @@
   </head>
 
   <body>
-    <!-- Top nav bar (fixed) -->
-    <nav>
-      <span class="title" style="font-family: Bungee">tweeter</span>
-      <div class="header-new-tweet">
-        <p><strong>Write</strong> a new tweet</p>
-        <i class="fas fa-angle-double-down" style="color: #dd4c31"></i>
-      </div>
-    </nav>
-
     <header id="profile-header">
+      <nav>
+        <!-- Extra div needed to keep flex-box positioning for 'header-new-tweet' since 'title' is fixed. -->
+        <div>
+          <span class="title" style="font-family: Bungee">tweeter</span>
+        </div>
+        <div class="header-new-tweet">
+          <p><strong>Write</strong> a new tweet</p>
+          <i class="fas fa-angle-double-down" style="color: #dd4c31"></i>
+        </div>
+      </nav>
       <div>
         <img src="/images/profile-hex.png" />
       </div>
