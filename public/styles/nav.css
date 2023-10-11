@@ -26,3 +26,19 @@ p {
   row-gap: 1rem;
   cursor: pointer;
 }
+
+@media (max-width: 415px) {
+  nav {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  div>span.title {
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+
+  .header-new-tweet {
+    margin-top: 15%
+  }
+}
