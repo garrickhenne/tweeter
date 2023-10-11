@@ -101,7 +101,29 @@ const initTweetPostHandler = function() {
   });
 };
 
+const initNewTweetHeaderHandlers = function() {
+  const $newTweetToggle = $('nav>div.header-new-tweet');
+  const initOnHover = function($element) {
+    $element.on('mouseover', function() {
+      $(this).find('i').addClass('fa-bounce');
+    });
+    $element.on('mouseout', function() {
+      $(this).find('i').removeClass('fa-bounce');
+    });
+  };
+
+  const initToggle = function($element) {
+    $element.on('click', function() {
+      $('.new-tweet').toggle('slow');
+    });
+  };
+
+  initOnHover($newTweetToggle);
+  initToggle($newTweetToggle);
+};
+
 $(function() {
   loadTweets(renderTweets);
   initTweetPostHandler();
+  initNewTweetHeaderHandlers();
 });
