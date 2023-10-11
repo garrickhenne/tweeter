@@ -1,0 +1,28 @@
+#scroll-to-top {
+  align-self: flex-end;
+  text-decoration: none;
+  position: sticky;
+  bottom: 24px;
+  margin-right: 0.1em;
+}
+
+/* Circle container */
+#scroll-to-top>div {
+  background-color: #dd4c31;
+  border-radius: 50%;
+  display: flex;
+  height: 60px;
+  width: 60px;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 1px 1px 5px 0px #00000069;
+  transition: all 0.1s linear;
+}
+
+#scroll-to-top>div:hover {
+  transform: scale(1.1, 1.1);
+}
+
+#scroll-to-top>div>i {
+  color: white;
+}
