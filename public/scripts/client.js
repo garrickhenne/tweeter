@@ -50,7 +50,7 @@ const loadTweets = (callback) => {
 
 const clearTextArea = ($textArea) => $textArea.val('');
 
-const handleErrorValidation = function(errDescription, $parentElement) {
+const handleErrorValidation = function(errDescription) {
   const $errorLabel = $(html`
     <label style='display: none;'>
       <i class="fa-solid fa-triangle-exclamation fa-shake" style="color: #dd4c31;"></i>
@@ -78,12 +78,12 @@ const initTweetPostHandler = function() {
     $tweetText.val($escapedInput.html());
 
     if ($tweetText.val() === '') {
-      handleErrorValidation('C\'mon, you gotta tweet something!', $(this).find('div.button-text-layer'));
+      handleErrorValidation('C\'mon, you gotta tweet something!');
       return;
     }
 
     if ($tweetText.val().length > 140) {
-      handleErrorValidation('Please consider summarizing your tweet with chatGPT...', $(this).find('div.button-text-layer'));
+      handleErrorValidation('Please consider summarizing your tweet with chatGPT...');
       return;
     }
 
@@ -120,13 +120,7 @@ const initNewTweetHeaderHandlers = function() {
         $newTweetElement.hide('slow');
       } else {
         $newTweetElement.show('fast', function() {
-          // Scroll to top instead of beginning of table since there are some issues with sticky header.
-          window.scrollTo({ top: 0, behavior: 'smooth' });
-
-          // Set focus 'asynchronously'.
-          setTimeout(() => {
-            this.querySelector('textarea').focus();
-          }, 1000);
+          this.querySelector('textarea').focus();
         });
       }
       isToggled = !isToggled;
