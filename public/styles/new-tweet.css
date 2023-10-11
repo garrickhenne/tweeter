@@ -4,11 +4,6 @@ button {
   border: none;
 }
 
-button:disabled,
-button[disabled]{
-  filter: grayscale(1);
-}
-
 label {
   font-family: 'Source Sans 3', sans-serif;
 }
@@ -32,8 +27,21 @@ label {
   display: flex;
   justify-content: space-between;
   font-family: 'Bungee', sans-serif;
+  max-height: 30px;
 }
 
 .new-tweet {
   margin: 40px 0;
+}
+
+.tweet-error {
+  width: 70%;
+  height: inherit;
+  border: 3px solid #dd4c31;
+  display: flex;
+  justify-content: space-around;
+  box-sizing: border-box;
+  font-size: large;
+  font-weight: 600;
+  align-items: center;
 }

@@ -50,17 +50,43 @@ const loadTweets = (callback) => {
 
 const clearTextArea = ($textArea) => $textArea.val('');
 
-const initTweetPostHandler = () => {
+const handleErrorValidation = function(errDescription, $parentElement) {
+  const $errorLabel = $(html`
+    <label style='display: none;'>
+      <i class="fa-solid fa-triangle-exclamation fa-shake" style="color: #dd4c31;"></i>
+      ${errDescription}
+      <i class="fa-solid fa-triangle-exclamation fa-shake" style="color: #dd4c31;"></i>
+    </label >`);
+  $errorLabel.addClass('tweet-error');
+  $errorLabel.insertAfter('button');
+
+  $errorLabel.fadeIn(400, () => {
+    setTimeout(function() {
+      $errorLabel.fadeOut(400, () => {
+        $errorLabel.remove();
+      });
+    }, 4000);
+  });
+};
+
+const initTweetPostHandler = function() {
   $('main form').on('submit', function(e) {
     e.preventDefault();
     // Clone tweet-text element so UI is not effected when escaped value is set.
     const $tweetText = $(this).find('#tweet-text').clone();
     const $escapedInput = $('<div>').text($tweetText.val());
     $tweetText.val($escapedInput.html());
-    if ($tweetText.val() === '' || $tweetText.val().length > 140) {
-      alert('Please enter valid data.');
+
+    if ($tweetText.val() === '') {
+      handleErrorValidation('C\'mon, you gotta tweet something!', $(this).find('div.button-text-layer'));
       return;
     }
+
+    if ($tweetText.val().length > 140) {
+      handleErrorValidation('Please consider summarizing your tweet with chatGPT...', $(this).find('div.button-text-layer'));
+      return;
+    }
+
     console.log('posting tweet:', $tweetText.serialize());
     $.ajax({
       type: 'POST',
