@@ -34,17 +34,12 @@ const createTweetElement = (tweet) => {
 };
 
 const renderTweets = (tweets) => {
-  $('main').append(tweets.map(createTweetElement));
-  $('main form').on('submit', function(e) {
-    e.preventDefault();
-    const $tweetText = $(this).find('#tweet-text');
-    console.log('posting tweet:', $tweetText.serialize());
-    $.ajax({
-      type: 'POST',
-      url: '/tweets',
-      data: $tweetText.serialize()
-    });
-  });
+  // Render from reverse to have most recent tweets first.
+  $('main .tweets').append(tweets.reverse().map(createTweetElement));
+};
+
+const renderCreatedTweet = (tweet) => {
+  $('main .tweets').prepend(createTweetElement(tweet.pop()));
 };
 
 const loadTweets = (callback) => {
@@ -53,6 +48,30 @@ const loadTweets = (callback) => {
     .catch(err => console.error('GET request to /tweets failed.', err));
 };
 
+const clearTextArea = ($textArea) => $textArea.val('');
+
+const initTweetPostHandler = () => {
+  $('main form').on('submit', function(e) {
+    e.preventDefault();
+    const $tweetText = $(this).find('#tweet-text');
+    if ($tweetText.val() === '' || $tweetText.val().length > 140) {
+      alert('Please enter valid data.');
+      return;
+    }
+    console.log('posting tweet:', $tweetText.serialize());
+    $.ajax({
+      type: 'POST',
+      url: '/tweets',
+      data: $tweetText.serialize(),
+      success: function() {
+        loadTweets(renderCreatedTweet);
+        clearTextArea($tweetText);
+      }
+    });
+  });
+};
+
 $(function() {
   loadTweets(renderTweets);
+  initTweetPostHandler();
 });
