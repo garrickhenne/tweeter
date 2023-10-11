@@ -26,3 +26,14 @@
 #scroll-to-top>div>i {
   color: white;
 }
+
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+    #scroll-to-top {
+      transform: scale(2.5, 2.5);
+      bottom: 85px;
+      margin-right: 3em;
+    }
+}
