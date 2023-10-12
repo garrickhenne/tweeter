@@ -1,4 +1,5 @@
 header#profile-header {
+  padding-top: 5%;
   width: 100%;
   height: fit-content;
   display: flex;
@@ -7,4 +8,20 @@ header#profile-header {
   flex-direction: column;
   background-color: #cc9a3e;
   background-image: url('../images/cartographer.png');
+}
+
+@media only screen and (min-width: 1024px) {
+  header#profile-header {
+    margin: 5%;
+    width: 35%;
+  }
+
+  header#profile-header>div>img {
+    margin-top: 10%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+
+
 }
