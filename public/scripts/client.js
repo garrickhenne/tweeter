@@ -86,7 +86,6 @@ const initTweetPostHandler = function() {
       return;
     }
 
-    console.log('posting tweet:', $tweetText.serialize());
     $.ajax({
       type: 'POST',
       url: '/tweets',
