@@ -49,42 +49,45 @@
   </head>
 
   <body>
-    <header id="profile-header">
-      <nav>
-        <!-- Extra div needed to keep flex-box positioning for 'header-new-tweet' since 'title' is fixed. -->
-        <div>
-          <span class="title" style="font-family: Bungee">tweeter</span>
-        </div>
-        <div class="header-new-tweet">
-          <p><strong>Write</strong> a new tweet</p>
-          <i class="fas fa-angle-double-down" style="color: #dd4c31"></i>
-        </div>
-      </nav>
+    <nav>
+      <!-- Extra div needed to keep flex-box positioning for 'header-new-tweet' since 'title' is fixed. -->
       <div>
-        <img src="/images/profile-hex.png" />
+        <span class="title" style="font-family: Bungee">tweeter</span>
       </div>
-      <br />
-      <div>
-        <h2>Garrick Henne</h2>
+      <div class="header-new-tweet">
+        <p><strong>Write</strong> a new tweet</p>
+        <i class="fas fa-angle-double-down" style="color: #dd4c31"></i>
       </div>
-    </header>
+    </nav>
 
-    <!-- Page-specific (main) content here -->
-    <main class="container">
-      <section class="new-tweet">
-        <form>
-          <div class="post-input-layer">
-            <label for="tweet-text"><strong>What are you humming about?</strong></label>
-            <textarea name="text" id="tweet-text"></textarea>
-          </div>
-          <div class="button-text-layer">
-            <button type="submit">tweet</button>
-            <output name="counter" class="counter" for="tweet-text">140</output>
-          </div>
-        </form>
-      </section>
-      <section class="tweets"></section>
-      <a href="#profile-header" id="scroll-to-top"></a>
-    </main>
+    <div id="desktop-content-container">
+      <header id="profile-header">
+        <div>
+          <img src="/images/profile-hex.png" />
+        </div>
+        <br />
+        <div>
+          <h2>Garrick Henne</h2>
+        </div>
+      </header>
+
+      <!-- Page-specific (main) content here -->
+      <main class="container">
+        <section class="new-tweet">
+          <form>
+            <div class="post-input-layer">
+              <label for="tweet-text"><strong>What are you humming about?</strong></label>
+              <textarea name="text" id="tweet-text"></textarea>
+            </div>
+            <div class="button-text-layer">
+              <button type="submit">tweet</button>
+              <output name="counter" class="counter" for="tweet-text">140</output>
+            </div>
+          </form>
+        </section>
+        <section class="tweets"></section>
+        <a href="#profile-header" id="scroll-to-top"></a>
+      </main>
+    </div>
   </body>
 </html>
