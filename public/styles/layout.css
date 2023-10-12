@@ -30,6 +30,7 @@ body {
 main {
   display: flex;
   justify-content: center;
+  flex-grow: 1;
   flex-direction: column;
   color: inherit;
   margin: 0 3%;

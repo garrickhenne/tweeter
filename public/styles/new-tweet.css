@@ -41,7 +41,7 @@ label {
   display: flex;
   justify-content: space-around;
   box-sizing: border-box;
-  font-size: large;
+  font-size: medium;
   font-weight: 600;
   align-items: center;
 }

@@ -60,13 +60,11 @@ const handleErrorValidation = function(errDescription) {
   $errorLabel.addClass('tweet-error');
   $errorLabel.insertAfter('button');
 
-  $errorLabel.fadeIn(400, () => {
-    setTimeout(function() {
-      $errorLabel.fadeOut(400, () => {
-        $errorLabel.remove();
-      });
-    }, 4000);
-  });
+  $errorLabel.fadeIn()
+    .delay(4000)
+    .fadeOut(400, function() {
+      $errorLabel.remove();
+    });
 };
 
 const initTweetPostHandler = function() {
