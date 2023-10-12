@@ -27,7 +27,7 @@ p {
   cursor: pointer;
 }
 
-@media (max-width: 415px) {
+/* @media (max-width: 415px) {
   nav {
     flex-direction: row;
     justify-content: center;
@@ -41,4 +41,4 @@ p {
   .header-new-tweet {
     margin-top: 15%
   }
-}
+} */
