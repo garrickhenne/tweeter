@@ -30,6 +30,10 @@ article > footer {
   padding: 0 1.5%;
 }
 
+article > p {
+  word-wrap: break-word;
+}
+
 article > footer > p {
   font-size: 70%;
   font-weight: 700;
