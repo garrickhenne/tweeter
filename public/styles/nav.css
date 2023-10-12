@@ -1,4 +1,5 @@
 nav {
+  position: absolute;
   width: 100%;
   color: white;
   padding: 0 1.5em .5em 1.5em;
@@ -27,18 +28,18 @@ p {
   cursor: pointer;
 }
 
-/* @media (max-width: 415px) {
+@media only screen and (min-width: 1024px) {
+  .title {
+    position: unset;
+    align-self: flex-end;
+  }
+
   nav {
-    flex-direction: row;
-    justify-content: center;
+    background-color: #4056A1;
+    height: 120px;
+    position: sticky;
+    top: -65px;
+    align-items: flex-end;
+    margin-top: 0;
   }
-
-  div>span.title {
-    left: 50%;
-    transform: translate(-50%, 0);
-  }
-
-  .header-new-tweet {
-    margin-top: 15%
-  }
-} */
+}
