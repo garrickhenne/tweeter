@@ -54,9 +54,9 @@ const resetCharCount = ($charCount) => $charCount.val(140);
 const handleErrorValidation = function(errDescription) {
   const $errorLabel = $(html`
     <label style='display: none;'>
-      <i class="fa-solid fa-triangle-exclamation fa-shake" style="color: #dd4c31;"></i>
+      <i class="fa-solid fa-triangle-exclamation fa-shake"></i>
       ${errDescription}
-      <i class="fa-solid fa-triangle-exclamation fa-shake" style="color: #dd4c31;"></i>
+      <i class="fa-solid fa-triangle-exclamation fa-shake"></i>
     </label >`);
   $errorLabel.addClass('tweet-error');
   $errorLabel.insertAfter('button');

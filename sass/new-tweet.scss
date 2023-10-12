@@ -47,3 +47,7 @@ label {
   font-weight: 600;
   align-items: center;
 }
+
+.tweet-error>i {
+  color: constants.$alert-red;
+}

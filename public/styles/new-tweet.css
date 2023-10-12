@@ -45,3 +45,7 @@ label {
   font-weight: 600;
   align-items: center;
 }
+
+.tweet-error > i {
+  color: #dd4c31;
+}
