@@ -31,8 +31,7 @@ body {
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 main {
-  display: flex;
-  justify-content: center;
+  @include constants.flexbox-middle;
   flex-direction: column;
   color: inherit;
   margin: 0 3%;

@@ -10,10 +10,9 @@
 
 /* Circle container */
 #scroll-to-top>div {
+  @include constants.flexbox-middle;
   background-color: constants.$alert-red;
   border-radius: 50%;
-  display: flex;
-  justify-content: center;
   height: 60px;
   width: 60px;
   align-items: center;
