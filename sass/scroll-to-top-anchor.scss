@@ -1,3 +1,5 @@
+@use '_constants.scss' as constants;
+
 #scroll-to-top {
   align-self: flex-end;
   text-decoration: none;
@@ -7,22 +9,22 @@
 }
 
 /* Circle container */
-#scroll-to-top > div {
-  background-color: #dd4c31;
+#scroll-to-top>div {
+  background-color: constants.$alert-red;
   border-radius: 50%;
   display: flex;
   height: 60px;
   width: 60px;
   justify-content: center;
   align-items: center;
-  box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.4117647059);
+  box-shadow: 1px 1px 5px 0px #00000069;
   transition: all 0.1s linear;
 }
 
-#scroll-to-top > div:hover {
+#scroll-to-top>div:hover {
   transform: scale(1.1, 1.1);
 }
 
-#scroll-to-top > div > i {
+#scroll-to-top>div>i {
   color: white;
 }

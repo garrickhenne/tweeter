@@ -1,11 +1,13 @@
+@use '_constants.scss' as constants;
+
 button {
-  background-color: #4056A1;
+  background-color: constants.$header-blue;
   color: white;
   border: none;
 }
 
 label {
-  font-family: "Source Sans 3", sans-serif;
+  font-family: 'Source Sans 3', sans-serif;
 }
 
 #tweet-text {
@@ -26,7 +28,7 @@ label {
 .button-text-layer {
   display: flex;
   justify-content: space-between;
-  font-family: "Bungee", sans-serif;
+  font-family: 'Bungee', sans-serif;
   max-height: 30px;
 }
 
@@ -37,7 +39,7 @@ label {
 .tweet-error {
   width: 70%;
   height: inherit;
-  border: 3px solid #dd4c31;
+  border: 3px solid constants.$alert-red;
   display: flex;
   justify-content: space-around;
   box-sizing: border-box;
