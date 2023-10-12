@@ -3,13 +3,12 @@ article {
   padding: 2%;
   margin: 3% 2%;
 }
+article img {
+  transform: scale(0.8);
+}
 
 article:hover {
   box-shadow: 6px 6px 0px 0px rgba(84, 81, 73, 0.4);
-}
-
-article img {
-  transform: scale(0.8);
 }
 
 article > header {
@@ -38,7 +37,6 @@ article > footer > p {
 
 article > footer > div {
   display: flex;
-  /* column-gap: 1%; */
 }
 
 article > footer > div > i {

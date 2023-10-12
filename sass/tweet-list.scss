@@ -1,17 +1,19 @@
 @use '_constants.scss' as constants;
 
+$border-size: 4px;
+
 article {
-  border: 4px solid constants.$primary-color;
+  border: $border-size solid constants.$primary-color;
   padding: 2%;
   margin: 3% 2%;
+  
+  img {
+    transform: scale(0.8);
+  }
 }
 
 article:hover {
   box-shadow: 6px 6px 0px 0px rgba(84, 81, 73, .4)
-}
-
-article img {
-  transform: scale(0.8);
 }
 
 article>header {
@@ -40,7 +42,6 @@ article>footer>p {
 
 article>footer>div {
   display: flex;
-  /* column-gap: 1%; */
 }
 
 article>footer>div>i {
@@ -55,7 +56,7 @@ article>footer>div>i:hover {
 }
 
 article>hr {
-  border-top: 4px solid constants.$primary-color;
+  border-top: $border-size solid constants.$primary-color;
 }
 
 header>p>strong {
