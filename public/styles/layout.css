@@ -46,14 +46,15 @@ h2 {
   }
 }
 
-/* @media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 812px) 
-  and (-webkit-min-device-pixel-ratio: 3) {
-    * {
-    } 
+@media only screen and (min-width: 1024px) {
+  #desktop-content-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
 
-    body {
-      font-size: xxx-large;
-    }
-} */
+@media only screen and (min-width: 768px) {
+
+
+}
