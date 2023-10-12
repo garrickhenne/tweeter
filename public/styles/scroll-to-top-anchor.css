@@ -11,9 +11,9 @@
   background-color: #dd4c31;
   border-radius: 50%;
   display: flex;
+  justify-content: center;
   height: 60px;
   width: 60px;
-  justify-content: center;
   align-items: center;
   box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.4117647059);
   transition: all 0.1s linear;
