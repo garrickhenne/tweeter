@@ -14,6 +14,7 @@ header#profile-header {
   header#profile-header {
     margin: 5%;
     width: 35%;
+    min-width: inherit;
   }
   header#profile-header > div > img {
     margin-top: 10%;

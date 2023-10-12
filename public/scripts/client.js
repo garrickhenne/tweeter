@@ -49,6 +49,7 @@ const loadTweets = (callback) => {
 };
 
 const clearTextArea = ($textArea) => $textArea.val('');
+const resetCharCount = ($charCount) => $charCount.val(140);
 
 const handleErrorValidation = function(errDescription) {
   const $errorLabel = $(html`
@@ -81,7 +82,7 @@ const initTweetPostHandler = function() {
     }
 
     if ($tweetText.val().length > 140) {
-      handleErrorValidation('Please consider summarizing your tweet with chatGPT...');
+      handleErrorValidation('Please summarize with chatGPT first...');
       return;
     }
 
@@ -94,6 +95,7 @@ const initTweetPostHandler = function() {
         loadTweets(renderCreatedTweet);
         // Pass original element rather than clone to actually clear UI.
         clearTextArea($('#tweet-text'));
+        resetCharCount($('output.counter'));
       }
     });
   });
